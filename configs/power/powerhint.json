@@ -17,6 +17,15 @@
                 "0x00000064"
             ],
             "HoldFd": true
+        }
+        {
+            "Name": "TouchscreenPowerOff",
+            "Path": "/sys/class/sec/tsp/cmd",
+            "Values": [
+                "prox_lp_scan_mode,0",
+                "prox_lp_scan_mode,1"
+            ],
+            "ResetOnInit": true
         },
         {
             "Name": "LCDEnable",
@@ -140,6 +149,12 @@
             "Node": "PowerHALRenderingState",
             "Duration": 0,
             "Value": "EXPENSIVE_RENDERING"
+        },
+        {
+            "PowerHint": "INTERACTIVE",
+            "Node": "TouchscreenPowerOff",
+            "Duration": 0,
+            "Value": "prox_lp_scan_mode,0"
         },
         {
             "PowerHint": "INTERACTIVE",
