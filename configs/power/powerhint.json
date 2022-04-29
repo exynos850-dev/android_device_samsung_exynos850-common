@@ -10,15 +10,6 @@
             "ResetOnInit": true
         },
         {
-            "Name": "PMQoSCpuDmaLatency",
-            "Path": "/dev/cpu_dma_latency",
-            "Values": [
-                "0x0000002c",
-                "0x00000064"
-            ],
-            "HoldFd": true
-        },
-        {
             "Name": "LCDEnable",
             "Path": "/sys/class/power_supply/battery/lcd",
             "Values": [
@@ -76,46 +67,16 @@
             "Value": "30"
         },
         {
-            "PowerHint": "LAUNCH",
-            "Node": "PMQoSCpuDmaLatency",
-            "Duration": 5000,
-            "Value": "0x0000002c"
-        },
-        {
-            "PowerHint": "CAMERA_LAUNCH",
-            "Node": "PMQoSCpuDmaLatency",
-            "Duration": 1000,
-            "Value": "0x0000002c"
-        },
-        {
             "PowerHint": "CAMERA_STREAMING_MID",
             "Node": "PowerHALMainState",
             "Duration": 0,
             "Value": "CAMERA_STREAMING_MID"
         },
         {
-            "PowerHint": "CAMERA_SHOT",
-            "Node": "PMQoSCpuDmaLatency",
-            "Duration": 1000,
-            "Value": "0x0000002c"
-        },
-        {
-            "PowerHint": "AUDIO_LAUNCH",
-            "Node": "PMQoSCpuDmaLatency",
-            "Duration": 2000,
-            "Value": "0x0000002c"
-        },
-        {
             "PowerHint": "AUDIO_STREAMING_LOW_LATENCY",
             "Node": "PowerHALAudioState",
             "Duration": 0,
             "Value": "AUDIO_STREAMING_LOW_LATENCY"
-        },
-        {
-            "PowerHint": "AUDIO_STREAMING_LOW_LATENCY",
-            "Node": "PMQoSCpuDmaLatency",
-            "Duration": 0,
-            "Value": "0x0000002c"
         },
         {
             "PowerHint": "SUSTAINED_PERFORMANCE",
