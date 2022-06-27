@@ -348,11 +348,15 @@ on boot
     chmod 0660 /sys/devices/system/cpu/cpufreq/policy0/ondemand/up_threshold
     chown system system /sys/devices/system/cpu/cpufreq/policy0/ondemand/sampling_rate
     chmod 0660 /sys/devices/system/cpu/cpufreq/policy0/ondemand/sampling_rate
+    chown system system /sys/devices/system/cpu/cpufreq/policy0/ondemand/sampling_down_factor
+    chmod 0660 /sys/devices/system/cpu/cpufreq/policy0/ondemand/sampling_down_factor
 
     chown system system /sys/devices/system/cpu/cpufreq/policy4/ondemand/up_threshold
     chmod 0660 /sys/devices/system/cpu/cpufreq/policy4/ondemand/up_threshold
     chown system system /sys/devices/system/cpu/cpufreq/policy4/ondemand/sampling_rate
     chmod 0660 /sys/devices/system/cpu/cpufreq/policy0/ondemand/sampling_rate
+    chown system system /sys/devices/system/cpu/cpufreq/policy4/ondemand/sampling_down_factor
+    chmod 0660 /sys/devices/system/cpu/cpufreq/policy4/ondemand/sampling_down_factor
     
 
     # Change permission for A-Box firmware logs file & GPR dump
@@ -380,10 +384,10 @@ on boot
     chmod 0664 /sys/power/execution_mode_change
     
     #Ondemand governor tuning
-    write /sys/devices/system/cpu/cpufreq/policy0/ondemand/sampling_rate 5000
-    write /sys/devices/system/cpu/cpufreq/policy4/ondemand/sampling_rate 5000
     write /sys/devices/system/cpu/cpufreq/policy0/ondemand/up_threshold 50
     write /sys/devices/system/cpu/cpufreq/policy4/ondemand/up_threshold 50
+    write /sys/devices/system/cpu/cpufreq/policy0/ondemand/sampling_down_factor 50
+    write /sys/devices/system/cpu/cpufreq/policy4/ondemand/sampling_down_factor 50
 
     #EMS
     chown system system /sys/kernel/ems/emstune/req_mode
