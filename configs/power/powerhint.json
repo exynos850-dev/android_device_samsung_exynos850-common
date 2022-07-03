@@ -10,6 +10,26 @@
             "ResetOnInit": true
         },
         {
+            "Name": "CPUClusterAMinfreq",
+            "Path": "/sys/devices/system/cpu/cpufreq/policy0/scaling_min_freq",
+            "Values": [
+                "2002000",
+                "1456000",
+                "546000"
+            ],
+            "ResetOnInit": true
+        },
+        {
+            "Name": "CPUClusterBMinfreq",
+            "Path": "/sys/devices/system/cpu/cpufreq/policy4/scaling_min_freq",
+            "Values": [
+                "2002000",
+                "1456000",
+                "546000"
+            ],
+            "ResetOnInit": true
+        },
+        {
             "Name": "PMQoSCpuDmaLatency",
             "Path": "/dev/cpu_dma_latency",
             "Values": [
@@ -83,6 +103,18 @@
             "Node": "TASchedtuneBoost",
             "Duration": 0,
             "Value": "30"
+        },
+        {
+            "PowerHint": "INTERACTION",
+            "Node": "CPUClusterAMinfreq",
+            "Duration": 500,
+            "Value": "1456000"
+        },
+        {
+            "PowerHint": "INTERACTION",
+            "Node": "CPUClusterBMinfreq",
+            "Duration": 500,
+            "Value": "1456000"
         },
         {
             "PowerHint": "LAUNCH",
@@ -161,6 +193,18 @@
             "Node": "LowPowerProximity",
             "Duration": 0,
             "Value": "dummy_func,0"
+        },
+        {
+            "PowerHint": "INTERACTIVE",
+            "Node": "CPUClusterAMinfreq",
+            "Duration": 5000,
+            "Value": "2002000"
+        },
+        {
+            "PowerHint": "INTERACTIVE",
+            "Node": "CPUClusterBMinfreq",
+            "Duration": 5000,
+            "Value": "2002000"
         },
         {
             "PowerHint": "DOUBLE_TAP_TO_WAKE",
